@@ -13,7 +13,7 @@ public class NumberOfMonth {
         int number=scanner.nextInt();
         for (int i = 0; i<month.length;i++){
             if(i==number-1 && number >=1 && number <= 12){
-                System.out.println(month[i]);
+                System.out.println(month[i]+" "+i);
             }
             else
                 System.out.println("Enter the number 1 - 12");
