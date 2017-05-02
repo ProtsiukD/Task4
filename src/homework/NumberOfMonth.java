@@ -7,16 +7,20 @@ import java.util.Scanner;
  */
 public class NumberOfMonth {
     public static void main(String[] args) {
-        String[] month = {"January","February","March","April","May","June","July","August","September","October","december"};
+        String[] month = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "December"};
+        int[] days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please, enter number month");
-        int number=scanner.nextInt();
-        for (int i = 0; i<month.length;i++){
-            if(i==number-1 && number >=1 && number <= 12){
-                System.out.println(month[i]);
+        int number = scanner.nextInt();
+
+        String tmp = "";
+        for (int i = 0; i < month.length; i++) {
+            if (i == number - 1 && number >= 1 && number <= 12) {
+                tmp = month[i] + " " + days[i] + " days.";
             }
-            else
-                System.out.println("Enter the number 1 - 12");
         }
+
+        System.out.println(tmp);
     }
 }

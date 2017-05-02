@@ -3,7 +3,7 @@ package homework;
 /**
  * Created by prots on 29.04.2017.
  */
-public class PositionElementsArray {
+public class Position {
     private static int index;
     public int positionSecondPositiveElement(int[] array) {
         int index = 0;
@@ -30,8 +30,8 @@ public class PositionElementsArray {
 
     public static void main(String[] args) {
         int[] array = {-56, 32, 89, -23, -90};
-        PositionElementsArray positionElementsArray = new PositionElementsArray();
-        System.out.println(positionElementsArray.positionSecondPositiveElement(array));
-        System.out.println(positionElementsArray.minAndPosition(array)+" "+index);
+        Position position = new Position();
+        System.out.println(position.positionSecondPositiveElement(array));
+        System.out.println(position.minAndPosition(array)+" "+index);
     }
 }
