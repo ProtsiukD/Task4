@@ -49,6 +49,25 @@ public class Car {
         return tmp;
     }
 
+    public static String sortPrint(Car[] cars) {
+        for (int i = 0; i < cars.length; i++) {
+            for (int j = 0; j < cars.length; j++) {
+                if (cars[i].yearProduction > cars[j].yearProduction) {
+                    Car tmp = cars[i];
+                    cars[i] = cars[j];
+                    tmp = cars[j];
+                }
+            }
+        }
+        String tmp1 = "";
+        for (int i = 0; i < cars.length; i++) {
+            String d = tmp1;
+            tmp1 = d + '\n' + cars[i].getType() + " " + cars[i].getYearProduction() + " " + cars[i].getEngineCapacity();
+        }
+        return tmp1;
+    }
+
+
     public static void main(String[] args) {
         Car car1 = new Car("BMW", 2003, 1.3);
         Car car2 = new Car("Mercedes", 2005, 5.0);
@@ -56,5 +75,6 @@ public class Car {
         Car car4 = new Car("Ford", 2010, 2.8);
         Car[] cars = {car1, car2, car3, car4};
         System.out.println(checkYear(cars, 2003));
+        System.out.println(sortPrint(cars));
     }
 }
